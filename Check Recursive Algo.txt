@@ -1,0 +1,47 @@
+function isLeapYear(year) {
+  if (
+      year % 100 === 0 ? year % 400 === 0 : year % 4 === 0
+  )
+      console.log(" Input year:", year, "is a Leap Year");
+  else
+      console.log(
+          " Input year:",
+          year,
+          "is NOT a Leap Year"
+      );
+}
+
+
+
+var age;
+age = prompt("What sort of tickets would you like");
+var ticketPrice;
+
+if (age <= 12) {
+  ticketPrice = 5;
+} else if (age >= 13 && age <= 17) {
+  ticketPrice = 10;
+} else if (age >= 18) {
+  ticketPrice = 20;
+} else {
+  ticketPrice = 15; // Senior citizen discount
+}
+console.log("Ticket Price: $" + ticketPrice);
+
+
+function fibonacii(n) {
+  if (n <= 1) return n;
+  return fibonacii(n - 1) + fibonacii(n - 2);
+}
+
+function isPlindrome(str, start, end) {
+  if (start >= end) return true;
+  if (str[start] !== str[end]) return false;
+
+  return isPlindrome(str, start + 1, end - 1);
+}
+
+function power(n, p) {
+  if (p === 0) return 1;
+  return n * power(n, p - 1);
+}
